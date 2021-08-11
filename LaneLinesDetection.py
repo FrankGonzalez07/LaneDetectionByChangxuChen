@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 import matplotlib.image as mpimg
+plt.rcParams['font.sans-serif']=['SimHei']
+plt.rcParams['axes.unicode_minus']=False
 
 def hist(img):
     bottom_half = img[img.shape[0]//2:,:]
