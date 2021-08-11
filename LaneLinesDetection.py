@@ -220,16 +220,16 @@ class LaneLinesDetection:
         out_img[:H, :W] = widget
 
         direction = max(set(self.dir), key = self.dir.count)
-        msg = "请保持直行！"
+        msg = u"请保持直行！"
         curvature_msg = "Curvature = {:.0f} m".format(min(lR, rR))
         if direction == 'L':
             y, x = self.left_curve_img[:,:,3].nonzero()
             out_img[y, x-100+W//2] = self.left_curve_img[y, x, :3]
-            msg = "前方左转弯！"
+            msg = u"前方左转弯！"
         if direction == 'R':
             y, x = self.right_curve_img[:,:,3].nonzero()
             out_img[y, x-100+W//2] = self.right_curve_img[y, x, :3]
-            msg = "前方右转弯！"
+            msg = u"前方右转弯！"
         if direction == 'F':
             y, x = self.keep_straight_img[:,:,3].nonzero()
             out_img[y, x-100+W//2] = self.keep_straight_img[y, x, :3]
