@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.image as mpimg
+import matplotlib as plt
 plt.rcParams['font.sans-serif']=['SimHei']
 plt.rcParams['axes.unicode_minus']=False
 
